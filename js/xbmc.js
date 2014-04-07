@@ -169,6 +169,10 @@ var XBMC = {
 				requestObj.params.playerid = 1;
 				requestObj.params.value = 'bigbackward';
 				break;
+			case 'open_subtitles':
+				requestObj.method = 'Addons.ExecuteAddon';
+				requestObj.params.addonid = 'script.xbmc.subtitles';
+				break;
 			default:
 				XBMC.requestUpdates(player);
 				return;
