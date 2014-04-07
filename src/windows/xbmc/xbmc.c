@@ -157,8 +157,11 @@ static void up_single_click_handler(ClickRecognizerRef recognizer, void *context
 		case CONTROLLING_TYPE_SEEK:
 			send_request("backword_short");
 			break;
+	//	case CONTROLLING_TYPE_VOLUME:			//
+	//		send_request("volume_increment");	// replaced volume increase with open subtitles
+	//		break;					//
 		case CONTROLLING_TYPE_VOLUME:
-			send_request("volume_increment");
+			send_request("open_subtitles");
 			break;
 	}
 }
